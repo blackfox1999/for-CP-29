@@ -118,7 +118,7 @@ def commit(token, ticket_type_id, count, purchaser_ids,rtime=30):
     while True:
     # 拼接完整URL
         num_TRY += 1
-        print('尝试次数：',num_TRY)
+        print('-------尝试次数：',num_TRY，'次--------')
         
         try:
             url = f"{base_url}?ticketTypeId={ticket_type_id}&count={count}&nonce={nonce}&timeStamp={timestamp}&sign={sign}&purchaserIds={purchaser_ids}"
@@ -135,7 +135,7 @@ def commit(token, ticket_type_id, count, purchaser_ids,rtime=30):
                 else:
                     print("抢票失败")
                     print(response.text)
-            print(rtime , "秒后开始下一次")
+            print('--------',rtime , "秒后开始下一次--------")
             time.sleep(rtime)
         except Exception as e:
             print(f"发生异常: {e}")
@@ -214,7 +214,7 @@ if now > target_time:
 
 # 计算延迟时间
 delay = target_time - now
-print(delay , "秒后开始")
+print(delay , "秒后开始--------")
 
 # 设置定时器
 timer = threading.Timer(delay, run_at_time)
