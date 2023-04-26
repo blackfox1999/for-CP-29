@@ -148,17 +148,8 @@ def run_at_time():
     print("持续操作")
 #--------------------------------------------------------------------
 
-# 需要的信息 发给别人记得清空
-# account = ""
-# password = ""
-# ## 手动输入
-# if account=="":
-#     account = input("请输入登陆号：")
-# if password=="":
-#     password = input("请输入登陆密码：")
 
-
-# 手动输入
+# 手动登录
 account = input("请输入登陆号：")
 password = input("请输入登陆密码：")
 token = login(account, password)
