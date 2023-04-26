@@ -200,7 +200,7 @@ strWait = input("请输入抢票间隔时间（单位：秒）：")
 time_wait = int(strWait)
 
 #自定义开始抢票的时刻
-time_St = input("请输入开始时间（例：13:15:00）：")
+time_St = input("请输入开始时间（例：13:15:00，时间里的冒号用英文的冒号。中英文的冒号不一样！）：")
 
 # 获取当前时间
 now = time.time()
